@@ -1,0 +1,76 @@
+/* public/styles.css */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    background-color: rgba(49, 144, 5, 0.756);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+  }
+  
+  .container {
+    background-color: rgba(78, 81, 139, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8); /* add transparency to the input fields */
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: rgb(188, 203, 150);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #4c9fae;
+  }
+  
+  .tab {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #5cb85c;
+    font-weight: bold;
+    color: chartreuse;
+  }
+
+  .tab{
+    color: chartreuse;
+  }
+  
+   h2 {
+    color:greenyellow;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }

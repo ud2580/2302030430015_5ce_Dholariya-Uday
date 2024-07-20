@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+  $('#myForm').submit(function(e) {
+    e.preventDefault(); // Prevent the default form submit
+
+    // Serialize the form data
+    var formData = $('#myForm').serialize();
+
+    // Mock AJAX request (replace with actual endpoint if needed)
+    $.ajax({
+      type: 'POST',
+      url: 'https://jsonplaceholder.typicode.com/posts', // Mock endpoint
+      data: formData,
+      success: function(response) {
+        // On success, show the success message and clear the form
+        $('#success-message').fadeIn();
+        $('#myForm')[0].reset();
+      },
+      error: function(error) {
+        // On error, alert the user
+        alert('Error: ' + error.statusText);
+      }
+    });
+  });
+});
+</script>
+    </head>
+    <body>
+        
+
+        <div id="success-message" style="display:none;">
+            <p>Form submitted successfully!</p>
+          </div>
+          
+          <form id="myForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <input type="submit" value="Submit">
+          </form>
+    </body>
+</html>

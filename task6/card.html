@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Cards with Modals</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center my-4">Product Catalog</h1>
+  <div class="row">
+    <!-- Product Card 1 -->
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="image/1.jfif" class="card-img-top" alt="Product 1">
+        <div class="card-body">
+          <h5 class="card-title">Product 1</h5>
+          <p class="card-text">Description of Product 1.</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal1">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="image/2.jfif" class="card-img-top" alt="Product 2">
+        <div class="card-body">
+          <h5 class="card-title">Product 2</h5>
+          <p class="card-text">Description of Product 2.</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal2">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="image/3.jfif" class="card-img-top" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title">Product 3</h5>
+          <p class="card-text">Description of Product 3.</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal3">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="productModal1" tabindex="-1" role="dialog" aria-labelledby="productModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel1">Product 1 Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="image/1.jfif" class="img-fluid mb-3" alt="Product 1">
+        <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p><strong>Price:</strong> RS.19.99</p>
+        <!-- Add more details as needed -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- Add more buttons for actions -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="productModal2" tabindex="-1" role="dialog" aria-labelledby="productModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel2">Product 2 Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="image/2.jfif" class="img-fluid mb-3" alt="Product 2">
+        <p>Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p><strong>Price:</strong> RS.24.99</p>
+        <!-- Add more details as needed -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- Add more buttons for actions -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="productModal3" tabindex="-1" role="dialog" aria-labelledby="productModalLabel3" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel3">Product 3 Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="image/3.jfif" class="img-fluid mb-3" alt="Product 3">
+        <p>Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p><strong>Price:</strong> RS.29.99</p>
+        <!-- Add more details as needed -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- Add more buttons for actions -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
