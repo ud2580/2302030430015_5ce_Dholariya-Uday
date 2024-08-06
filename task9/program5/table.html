@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-color: #e0d9d9;
+        }
+        h1{
+            text-align: center;
+
+        }
+        table{
+            object-position: center;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        tr,td{
+            padding: 10px;
+        }
+        tr:nth-child(even)
+         {background-color: #979797;}
+
+         th{
+            padding: 20px;
+            font-size: 20px;
+            background: #aaaaaa;
+         }
+         tr:hover{
+            transition:1;
+            background-color: #ffe4c4;
+         }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>User Registration Form</h1>
+    <table border="5">
+        <thead>
+        <tr class="ease-in-out transform hover:translate-y-1 hover:scale-110">
+            <th>Emploe</th>
+            <th>Email</th>
+            <th>Pass</th>
+            <th>Role</th>
+            <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody id="userlist">
+
+        </tbody>
+
+   
+    </table>
+</center>
+    <script>
+        function fetchUsers(){
+            fetch('/users')
+            .then(response => response.json())
+            .then(users=>{
+                const userlist=document.getElementById('userlist');
+                userlist.innerHTML='';
+
+                users.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML=
+                    `<td>${user.username}</td>
+                    <td>${user.email}</td>
+                    <td>${user.password}</td>
+                    <td>${user.role}</td>
+                    <td>${user.gender}</td>`
+                    userlist.appendChild(row);
+                    
+                });
+            })
+        }
+        fetchUsers();
+    </script>
+</body>
+</html>
